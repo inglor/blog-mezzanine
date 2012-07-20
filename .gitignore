@@ -1,0 +1,19 @@
+# python compiled files
+*.pyc
+*.pyo
+
+# databases
+*.db
+.DS_Store
+
+# other
+.coverage
+
+# local settings
+local_settings.py
+static/
+
+# vim temp files
+*.swp
+*.swo
+*~
