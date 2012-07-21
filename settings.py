@@ -56,12 +56,12 @@
 
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
-# BLOG_USE_FEATURED_IMAGE = True
+BLOG_USE_FEATURED_IMAGE = True
 
 # If ``True``, users will be automatically redirected to HTTPS
 # for the URLs specified by the ``SSL_FORCE_URL_PREFIXES`` setting.
 #
-# SSL_ENABLED = True
+SSL_ENABLED = False
 
 # Host name that the site should always be accessed via that matches
 # the SSL certificate.
@@ -89,6 +89,7 @@ USE_SOUTH = True
 # In the format (('Full Name', 'email@example.com'),
 #                ('Full Name', 'anotheremail@example.com'))
 ADMINS = (
+        ('Leonidas Spyropoulos','artafinde@gmail.com'),
     # ('Your Name', 'your_email@domain.com'),
 )
 MANAGERS = ADMINS
@@ -100,7 +101,7 @@ MANAGERS = ADMINS
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = None
+TIME_ZONE = "Europe/London"
 
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
@@ -243,7 +244,7 @@ INSTALLED_APPS = (
     "mezzanine.pages",
     "mezzanine.galleries",
     "mezzanine.twitter",
-    #"mezzanine.accounts",
+    "mezzanine.accounts",
     #"mezzanine.mobile",
 )
 
@@ -310,21 +311,21 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 # These settings are used by the default fabfile.py provided.
 # Check fabfile.py for defaults.
 
-# FABRIC = {
-#     "SSH_USER": "", # SSH username
-#     "SSH_PASS":  "", # SSH password (consider key-based authentication)
-#     "SSH_KEY_PATH":  "", # Local path to SSH key file, for key-based auth
-#     "HOSTS": [], # List of hosts to deploy to
-#     "VIRTUALENV_HOME":  "", # Absolute remote path for virtualenvs
-#     "PROJECT_NAME": "", # Unique identifier for project
-#     "REQUIREMENTS_PATH": "", # Path to pip requirements, relative to project
-#     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
-#     "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
-#     "LIVE_HOSTNAME": "www.example.com", # Host for public site.
-#     "REPO_URL": "", # Git or Mercurial remote repo URL for the project
-#     "DB_PASS": "", # Live database password
-#     "ADMIN_PASS": "", # Live admin user password
-# }
+FABRIC = {
+    "SSH_USER": "ubuntu", # SSH username
+    "SSH_PASS":  "", # SSH password (consider key-based authentication)
+    "SSH_KEY_PATH":  "/home/inglor/Dropbox/t1microdrupal.pem", # Local path to SSH key file, for key-based auth
+    "HOSTS": ["ec2-54-247-47-225.eu-west-1.compute.amazonaws.com"], # List of hosts to deploy to
+    "VIRTUALENV_HOME":  "/home/ubuntu/maria", # Absolute remote path for virtualenvs
+    "PROJECT_NAME": "mariaBlog", # Unique identifier for project
+    "REQUIREMENTS_PATH": "requirements/project.txt", # Path to pip requirements, relative to project
+    "GUNICORN_PORT": 8000, # Port gunicorn will listen on
+    "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
+    "LIVE_HOSTNAME": "marakio.eu", # Host for public site.
+    "REPO_URL": "git://github.com/inglor/blog-mezzanine.git", # Git or Mercurial remote repo URL for the project
+    "DB_PASS": "artanis1", # Live database password
+    "ADMIN_PASS": "artanis1", # Live admin user password
+}
 
 
 ##################
