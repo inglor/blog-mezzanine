@@ -317,7 +317,7 @@ FABRIC = {
     "SSH_KEY_PATH":  "/home/inglor/Dropbox/t1microdrupal.pem", # Local path to SSH key file, for key-based auth
     "HOSTS": ["ec2-54-247-47-225.eu-west-1.compute.amazonaws.com"], # List of hosts to deploy to
     "VIRTUALENV_HOME":  "/home/ubuntu/maria", # Absolute remote path for virtualenvs
-    "PROJECT_NAME": "mariaBlog", # Unique identifier for project
+    "PROJECT_NAME": "maria", # Unique identifier for project
     "REQUIREMENTS_PATH": "requirements/project.txt", # Path to pip requirements, relative to project
     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
     "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
